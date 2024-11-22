@@ -4,9 +4,9 @@ public class ReverseAnArrayCode{
         int end=nums.length-1;
         while(start< end){
 
-            int temp=nums[start];
-            nums[start]=nums[end];
-            nums[end]=temp;
+            int temp=nums[end];
+            nums[end]=nums[start];
+            nums[start]=temp;
             start++;
             end--;
 
