@@ -42,4 +42,4 @@ public class MaxSubArraySumCode{
     }
 }
 
-// brute for approach
+// brute force approach
