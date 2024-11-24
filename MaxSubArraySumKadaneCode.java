@@ -44,10 +44,43 @@ public class MaxSubArraySumKadaneCode {
        }
        System.out.println("our max sub array: "+ms);
     }
+
     
+
+    public static int smallestNegativeUsingKadane(int[] nums1) {
+        int maxNegative = Integer.MIN_VALUE; // Initialize with the smallest possible integer
+        int currentSum = 0;
+
+        for (int num : nums1) {
+            currentSum += num;
+
+            // Update the maxNegative to the least negative number
+            if (num > maxNegative) {
+                maxNegative = num;
+            }
+
+            // If the currentSum drops below the current element, reset it
+            if (currentSum < num) {
+                currentSum = num;
+            }
+
+            // Also update maxNegative in case currentSum is a better negative subarray
+            if (currentSum > maxNegative) {
+                maxNegative = currentSum;
+            }
+        }
+
+        return maxNegative;
+    }
+
+    
+
     public static void main(String[] args) {
         int nums[] = {-2,-3,4,-1,-2,1,5,-3};
         kadaneAlgo(nums);
         // printSubArray(nums);
+        int[] nums1 = {-4, -2, -8, -5, -9};
+        int result = smallestNegativeUsingKadane(nums1);
+        System.out.println("Smallest Negative Number: " + result);
     }
 }
