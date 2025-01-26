@@ -16,7 +16,7 @@ public class DiagonalSumDemo {
 
         //     }
         // }
-        for(int i=0; i < matrix.length ; i++){
+        for(int i=0; i < matrix.length ; i++){//time complexity is O(n)
             sum += matrix[i][i];//primary diagonal
 
             //secondary diagonal
