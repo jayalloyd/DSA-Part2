@@ -19,4 +19,4 @@ public class PallindromCheck{
         System.out.println("the word is : "+str+""+" a pallindrome check "+isPallindrome(str));
 
     }
-}
+}//time complexity is big o(n)
